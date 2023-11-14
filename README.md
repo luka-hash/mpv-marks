@@ -1,6 +1,6 @@
 # mpv-marks
 
-Suckless (book)marking solutions for mpv.
+Suckless (video)marking solutions for mpv.
 
 It creates a file with the name of the video you are watching with the additional `.marks` extension, and each line of the file is one timestamp.
 
@@ -12,8 +12,8 @@ Put the `marks.lua` file in the `~/.config/mpv/scripts/` directory (or relevant 
 
 ## Usage
 
-- 'b' do (add) mark
-- 'B' undo (remove) mark
+- `b` do (add) mark
+- `B` undo (remove) mark
 
 ## TODO
 
