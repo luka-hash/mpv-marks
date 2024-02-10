@@ -2,7 +2,6 @@
 -- This code is licensed under MIT licence (see LICENCE for details)
 
 local mp = require("mp")
-local utils = require("mp.utils")
 
 local floor = math.floor
 

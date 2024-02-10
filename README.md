@@ -10,6 +10,8 @@ Why would you need that? If you need to ask, you don't need this plugin. :)
 
 Put the `marks.lua` file in the `~/.config/mpv/scripts/` directory (or relevant directory on non-linux operating systems).
 
+You will also need a notification-daemon, like dunst, if you want to have on screen notifications when you add/remove marks.
+
 ## Usage
 
 - `b` do (add) mark
@@ -17,7 +19,7 @@ Put the `marks.lua` file in the `~/.config/mpv/scripts/` directory (or relevant 
 
 ## TODO
 
-- [ ] Add on-screen notifications
+- [x] Add on-screen notifications
 
 ## Licence
 
