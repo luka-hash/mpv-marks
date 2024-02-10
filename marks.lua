@@ -29,17 +29,19 @@ local format_time = function(time)
 end
 
 mp.add_key_binding("b", "do-mark", function()
-	local filename = utils.join_path(utils.getcwd(), mp.get_property_native("filename") .. ".marks")
+	local filename = mp.get_property_native("path") .. ".marks"
 	local file = assert(io.open(filename, "a"))
-	file:write(format_time(mp.get_property_native("time-pos")) .. "\n")
+	local time = format_time(mp.get_property_native("time-pos"))
+	file:write( time .. "\n")
 	file:flush()
 	file:close()
+	os.execute(string.format("notify-send 'do-mark: %s' '%s'", time, filename))
 end, {
 	repeatable = true
 })
 
 mp.add_key_binding("B", "undo-mark", function()
-	local filename = utils.join_path(utils.getcwd(), mp.get_property_native("filename") .. ".marks")
+	local filename = mp.get_property_native("path") .. ".marks"
 	local file = assert(io.open(filename, "r"))
 	local lines = {}
 	for line in file:lines() do
@@ -51,6 +53,7 @@ mp.add_key_binding("B", "undo-mark", function()
 	file:write(table.concat(lines, "\n"))
 	file:flush()
 	file:close()
+	os.execute(string.format("notify-send 'undo-mark one line' %s", filename))
 end, {
 	repeatable = true
 })
