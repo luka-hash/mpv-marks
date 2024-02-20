@@ -34,7 +34,8 @@ mp.add_key_binding("b", "do-mark", function()
 	file:write( time .. "\n")
 	file:flush()
 	file:close()
-	os.execute(string.format("notify-send 'do-mark: %s' '%s'", time, filename))
+	-- os.execute(string.format("notify-send 'do-mark: %s' '%s'", time, filename))
+	mp.osd_message(string.format("marked at %s", time))
 end, {
 	repeatable = true
 })
@@ -52,7 +53,8 @@ mp.add_key_binding("B", "undo-mark", function()
 	file:write(table.concat(lines, "\n"))
 	file:flush()
 	file:close()
-	os.execute(string.format("notify-send 'undo-mark one line' %s", filename))
+	-- os.execute(string.format("notify-send 'undo-mark one line' %s", filename))
+	mp.osd_message("unmarked")
 end, {
 	repeatable = true
 })
