@@ -14,12 +14,12 @@ Put the `marks.lua` file in the `~/.config/mpv/scripts/` directory (or relevant 
 
 - `b` do (add) mark
 - `B` undo (remove) mark
+- `c` add cut command (for purposes of programmable editing, or something similar)
 
 ## TODO
-
-- [x] Add on-screen notifications
+-   
 
 ## Licence
 
-This code is licensed under the terms of MIT licence (see `LICENCE` for details).
+This code is licensed under the terms of the MIT licence (see `LICENCE` for details).
 
